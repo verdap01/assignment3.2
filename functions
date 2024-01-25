@@ -1,0 +1,37 @@
+remind_me <- function() {
+  to_do <-
+    c(
+      "Finish R assignment due Friday",
+      "Buy fairy lights for friend's birthday on Monday",
+      "Help friend move on Wednesday",
+      "Rewatch R lectures for exam next Friday"
+    )
+  return(to_do)
+}
+
+cheat <- function(question) {
+  if (question == 1) {
+    print("set.seed(14857642)")
+    print("exam_grades <- trunc(rnorm(70, mean = 6, sd = 2))")
+    print(
+      "hist(exam_grades, col = 'lightgreen', main = 'Histogram of Exam Grades',xlab = 'Grades', ylab = 'Frequency of Students')"
+    )
+  } else if (question == 2) {
+    print("schipholdata <-read.csv('/path/to/file/schiphol_data.csv')")
+    print(
+      "plot(schipholdata$DATE, schipholdata$TMIN, type = 'p', main = 'Minimum Temperatures Recorded at Schiphol Airport Between 1951-2021', xlab = 'Time', ylab = 'Temperature')"
+    )
+  } else if (question == 3) {
+    print("install.packages('titanic')")
+    print("library('titanic')")
+    print("t_gender <- titanic_train$Sex")
+    print(
+      "t_alive <- factor(titanic_train$Survived, levels = c(0, 1), labels = c('dead', 'alive'))"
+    )
+    print("titanicdata <- data.frame(t_gender, t_alive)")
+    print(
+      "ggplot(titanicdata, aes(x = t_gender, fill = t_alive)) + geom_bar(position = 'stack') + labs(x = 'sex', y = 'count', fill = 'How did it go?')"
+    )
+  } else
+    print("Question number must be 1, 2 or 3")
+}
