@@ -1,0 +1,68 @@
+---
+title: "Week 3 Part 2 Functions"
+author: "verdap01"
+date: "2024-01-25"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# https://github.com/verdap01/assignment3.2
+source("https://raw.githubusercontent.com/verdap01/assignment3.2/main/Week%203%20Assignment%203.2.R")
+```
+
+The function remind_me() takes no arguments. When used it will return a list of things
+I need to remember this week. This list is attached to variable to_do, which is
+returned in the function.
+
+
+```{r remind_me}
+knitr::opts_chunk$set(echo = TRUE)
+
+remind_me()
+```
+
+
+
+The following function cheat() is used to return the answers to questions 1, 2 or
+3 in assignment 3.2. The function takes one argument.
+
+If the input to the function (question) is 1, the if statement will run and print
+the answer code for the first question. The answers to question 2 and 3 will be
+displayed if question == 2 or question == 3 due to the elseif statements:
+
+```{r cheat function}
+
+cheat(1)
+
+```
+
+If the function input is not 1,2 or 3, the function will print a message conveying
+this (the final else statement).
+
+
+
+
+
+The following function creates concentric squares with randomized colors. First
+"dplyr" is loaded using the library function. Then, the make_art function is defined.
+The function will take one argument "seed" which is used to set seed and obtain 
+the same randomisation each time.
+
+Next, a function random_color is defined which generates a random color; the 
+function does not need any input arguments. 
+
+Next, the coordinates of a square are created and placed in a tibble so that it
+may be plotted later on.
+
+The squares are plotted using ggplot() + geom_polygon functions, which are filled
+with the random_color() function generated earlier. For each geom_polygon function
+rendered, the dimensions of the square are reduced 5 units by making the appropriate
+alterations in the x and y variables defined bove, which make up the coordinates.
+
+```{r make_art function}
+make_art(123)
+```
+
+
